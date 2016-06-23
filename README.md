@@ -13,47 +13,47 @@
 
 ####comment table
 
-* belongs_to  user
-* belongs_to  prototype
+* belongs_to  user  
+* belongs_to  prototype  
 
 
 ####user table
 
-* has_many prototype
-* has_many comment
+* has_many prototype  
+* has_many comment  
 
 
 ####prototype
 
-* has_many comment
-* belongs_to user
+* has_many comment  
+* belongs_to user  
 
 
 
 ##column and data
 
 #### user
-  name        :varchar
-  email     :varchar
-  password    :varchar
-  member      :varchar
-  profile     :varchar
-  works     :varchar
-  avatar      :text
+  name        :varchar  
+  email     :varchar  
+  password    :varchar  
+  member      :varchar  
+  profile     :varchar  
+  works     :varchar  
+  avatar      :text  
 
 #### prototype
-  title     :text
-  image     :text
-  catchcopy   :text
-  concept     :text
-  tag       :text
-  user_id     :INT
+  title     :text  
+  image     :text  
+  catchcopy   :text  
+  concept     :text  
+  tag       :text  
+  user_id     :INT  
 
 #### comment
-  user_id     :INT
-  prototype_id  :INT
-  text      :text
-  like      :BIT
+  user_id     :INT  
+  prototype_id  :INT  
+  text      :text  
+  like      :BIT  
 
 
 
