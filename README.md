@@ -53,7 +53,7 @@
   user_id     :INT
   prototype_id  :INT
   text      :text
-  like      :BITß
+  like      :BIT
 
 
 
