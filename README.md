@@ -1,61 +1,67 @@
-== README
+#DB DESIGN
 
-##protospace
+##user
 
-##create table
+####association
+* has_many prototype
+* has_many comment
+* has_many like
 
-* user
-* prototype
-* comment
+####column
+  id         　　:INT
+  name        :string
+  email     :string
+  password    :string
+  member      :string
+  profile     :text
+  works     :string
+  avatar      :text
 
+##prototype
 
-##association
+####association
+* has_many comment
+* has_many image
+* has_many like
+* belongs_to user
 
-####comment table
+####column
+  id          :INT
+  title           :string  
+  image           :text
+  catchcopy       :string
+  concept         :text
+  user_id         :INT
 
-* belongs_to  user  
-* belongs_to  prototype  
+##comment
 
+####association
+* belongs_to  user
+* belongs_to  prototype
 
-####user table
+####column
+  id            :INT
+  user_id     :INT
+  prototype_id  :INT
+  text      :text
+  
+##like
 
-* has_many prototype  
-* has_many comment  
+####association
 
+* belongs_to  prototype
 
-####prototype
+####column
 
-* has_many comment  
-* belongs_to user  
+  id            :INT
+  user_id     :INT
+  prototype_id  :INT
+  
+##image
 
-
-
-##column and data
-
-#### user
-  name        :varchar  
-  email     :varchar  
-  password    :varchar  
-  member      :varchar  
-  profile     :varchar  
-  works     :varchar  
-  avatar      :text  
-
-#### prototype
-  title     :text  
-  image     :text  
-  catchcopy   :text  
-  concept     :text  
-  tag       :text  
-  user_id     :INT  
-
-#### comment
-  user_id     :INT  
-  prototype_id  :INT  
-  text      :text  
-  like      :BIT  
-
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+####association
+* belongs_to  prototype 
+####column
+  id            :INT
+  image   :text
+  prototype_id  :INT
