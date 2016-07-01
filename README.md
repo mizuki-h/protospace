@@ -103,10 +103,10 @@
 | column         |         data  |
 |:--------------:|:-------------:|
 | id             |            INT|
-| image          |           text|
+| content        |           text|
 | prototype_id   |            INT|
 
-<!-- 
+<!--
 * id            :INT
 * image         :text
 * prototype_id  :INT -->
