@@ -3,9 +3,9 @@
 ##user
 
 ####association
-* has_many prototype
-* has_many comment
-* has_many like
+* has_many prototypes
+* has_many comments
+* has_many likes
 
 ####column
 <!-- * id          :INT
@@ -31,9 +31,9 @@
 ##prototype
 
 ####association
-* has_many comment
-* has_many image
-* has_many like
+* has_many comments
+* has_many images
+* has_many likes
 * belongs_to user
 
 ####column
