@@ -8,14 +8,25 @@
 * has_many like
 
 ####column
-* id         　　:INT
+<!-- * id          :INT
 * name        :string
-* email     :string
+* email       :string
 * password    :string
 * member      :string
 * profile     :text
-* works     :string
-* avatar      :text
+* works       :string
+* avatar      :text -->
+
+| column    |       data |
+|:---------:|:----------:|
+| id        |         INT|
+| name      |      string|
+| email     |      string|
+| password  |      string|
+| member    |      string|
+| profile   |        text|
+| works     |      string|
+| avatar    |        text|
 
 ##prototype
 
@@ -26,13 +37,23 @@
 * belongs_to user
 
 ####column
-* id          :INT
-* title           :string  
+| column    |      data  |
+|:---------:|:----------:|
+| id        |         INT|
+| title     |      string|
+| image     |        text|
+| catchcopy |      string|
+| concept   |        text|
+| user_id   |         INT|
+
+<!--
+* id              :INT
+* title           :string
 * image           :text
 * catchcopy       :string
 * concept         :text
 * user_id         :INT
-
+ -->
 ##comment
 
 ####association
@@ -40,10 +61,18 @@
 * belongs_to  prototype
 
 ####column
-* id            :INT
-* user_id     :INT
+| column         |         data  |
+|:--------------:|:-------------:|
+| id             |            INT|
+| user_id        |            INT|
+| prototype_id   |            INT|
+| text           |           text|
+
+
+<!-- * id            :INT
+* user_id       :INT
 * prototype_id  :INT
-* text      :text
+* text          :text -->
 
 ##like
 
@@ -53,9 +82,16 @@
 
 ####column
 
+| column         |         data  |
+|:--------------:|:-------------:|
+| id             |            INT|
+| user_id        |            INT|
+| prototype_id   |            INT|
+
+<!--
 * id            :INT
-* user_id     :INT
-* prototype_id  :INT
+* user_id       :INT
+* prototype_id  :INT -->
 
 ##image
 
@@ -63,6 +99,14 @@
 * belongs_to  prototype
 
 ####column
+
+| column         |         data  |
+|:--------------:|:-------------:|
+| id             |            INT|
+| image          |           text|
+| prototype_id   |            INT|
+
+<!-- 
 * id            :INT
-* image   :text
-* prototype_id  :INT
+* image         :text
+* prototype_id  :INT -->
