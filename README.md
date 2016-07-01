@@ -79,6 +79,7 @@
 ####association
 
 * belongs_to  prototype
+* belongs_to  user
 
 ####column
 
