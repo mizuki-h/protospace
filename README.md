@@ -106,6 +106,7 @@
 | id             |            INT|
 | content        |           text|
 | prototype_id   |            INT|
+| status         |            INT|
 
 <!--
 * id            :INT
