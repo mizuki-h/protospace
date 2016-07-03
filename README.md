@@ -11,7 +11,7 @@
 
 | column    |       data |
 |:---------:|:----------:|
-| id        |         INT|
+| id        |     integer|
 | name      |      string|
 | email     |      string|
 | password  |      string|
@@ -31,11 +31,11 @@
 ####column
 | column    |      data  |
 |:---------:|:----------:|
-| id        |         INT|
+| id        |     integer|
 | title     |      string|
 | catchcopy |      string|
 | concept   |        text|
-| user_id   |         INT|
+| user_id   |     integer|
 
 ##comment
 
@@ -46,9 +46,9 @@
 ####column
 | column         |         data  |
 |:--------------:|:-------------:|
-| id             |            INT|
-| user_id        |            INT|
-| prototype_id   |            INT|
+| id             |        integer|
+| user_id        |        integer|
+| prototype_id   |        integer|
 | text           |           text|
 
 ##like
@@ -62,9 +62,9 @@
 
 | column         |         data  |
 |:--------------:|:-------------:|
-| id             |            INT|
-| user_id        |            INT|
-| prototype_id   |            INT|
+| id             |        integer|
+| user_id        |        integer|
+| prototype_id   |        integer|
 
 
 ##image
@@ -76,8 +76,8 @@
 
 | column         |         data  |
 |:--------------:|:-------------:|
-| id             |            INT|
+| id             |        integer|
 | content        |           text|
-| prototype_id   |            INT|
-| status         |            INT|
+| prototype_id   |        integer|
+| status         |        integer|
 
