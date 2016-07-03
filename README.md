@@ -35,7 +35,7 @@
 | title     |      string|
 | catchcopy |      string|
 | concept   |        text|
-| user_id   |     integer|
+| user      |  references|
 
 ##comment
 
@@ -47,8 +47,8 @@
 | column         |         data  |
 |:--------------:|:-------------:|
 | id             |        integer|
-| user_id        |        integer|
-| prototype_id   |        integer|
+| user           |     references|
+| prototype      |     references|
 | text           |           text|
 
 ##like
@@ -63,8 +63,8 @@
 | column         |         data  |
 |:--------------:|:-------------:|
 | id             |        integer|
-| user_id        |        integer|
-| prototype_id   |        integer|
+| user           |     references|
+| prototype      |     references|
 
 
 ##image
@@ -78,6 +78,6 @@
 |:--------------:|:-------------:|
 | id             |        integer|
 | content        |           text|
-| prototype_id   |        integer|
+| prototype      |     references|
 | status         |        integer|
 
