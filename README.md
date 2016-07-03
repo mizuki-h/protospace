@@ -8,14 +8,6 @@
 * has_many likes
 
 ####column
-<!-- * id          :INT
-* name        :string
-* email       :string
-* password    :string
-* member      :string
-* profile     :text
-* works       :string
-* avatar      :text -->
 
 | column    |       data |
 |:---------:|:----------:|
@@ -41,19 +33,10 @@
 |:---------:|:----------:|
 | id        |         INT|
 | title     |      string|
-| image     |        text|
 | catchcopy |      string|
 | concept   |        text|
 | user_id   |         INT|
 
-<!--
-* id              :INT
-* title           :string
-* image           :text
-* catchcopy       :string
-* concept         :text
-* user_id         :INT
- -->
 ##comment
 
 ####association
@@ -67,12 +50,6 @@
 | user_id        |            INT|
 | prototype_id   |            INT|
 | text           |           text|
-
-
-<!-- * id            :INT
-* user_id       :INT
-* prototype_id  :INT
-* text          :text -->
 
 ##like
 
@@ -89,10 +66,6 @@
 | user_id        |            INT|
 | prototype_id   |            INT|
 
-<!--
-* id            :INT
-* user_id       :INT
-* prototype_id  :INT -->
 
 ##image
 
@@ -108,7 +81,3 @@
 | prototype_id   |            INT|
 | status         |            INT|
 
-<!--
-* id            :INT
-* image         :text
-* prototype_id  :INT -->
