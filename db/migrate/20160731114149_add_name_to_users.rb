@@ -7,3 +7,4 @@ class AddNameToUsers < ActiveRecord::Migration
     add_column :users, :avatar, :text
   end
 end
+
