@@ -2,10 +2,8 @@
   = form_for resource, as: resource_name, url: session_path(resource_name),html: {class: 'form-signin'} do |f|
     %h2.form-signin-heading Please sign in
     %label.sr-only{for: "inputEmail"} Email address
-    / %input#inputEmail.form-control{autofocus: "", placeholder: "Email address", required: "", type: "email"}/
     = f.email_field :email, placeholder: 'E-Mail', class: 'form-control', id: 'inputEmail'
     %label.sr-only{for: "inputPassword"} Password
-    / %input#inputPassword.form-control{placeholder: "Password", required: "", type: "password"}/
     = f.password_field :password, placeholder: 'Password', class: 'form-control', id: 'inputPassword'
     .checkbox
       %label
