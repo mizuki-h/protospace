@@ -10,7 +10,11 @@ class UsersController < ApplicationController
 
   def update
     current_user.update(user_params)
-    redirect_to root_path
+    if @user.update(user_params)
+       redirect_to root_url, notice: "Updated Profile Successfully"
+    else
+       redirect_to edit_user_path, alert: 'Not be updated'
+    end
   end
 
   private
