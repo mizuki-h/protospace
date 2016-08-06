@@ -11,8 +11,6 @@ class UsersController < ApplicationController
   def update
     if current_user.update(user_params)
        redirect_to root_url, notice: "Updated Profile Successfully"
-    else
-       redirect_to edit_user_path, alert: 'Not Be Updated'
     end
   end
 
