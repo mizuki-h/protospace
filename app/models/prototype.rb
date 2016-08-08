@@ -4,3 +4,5 @@ class Prototype < ActiveRecord::Base
   accepts_nested_attributes_for :prototype_images
   validates :title, :catchcopy, :concept, presence: true
 end
+
+
