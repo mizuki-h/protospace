@@ -2,27 +2,28 @@
   .col-md-8.col-md-offset-2
     %header.row.user-nav.row
       .col-md-12
-        = f.text_field :title, placeholder: 'Title',class: 'proto-new-title'
+        %input.proto-new-title{ type: "text", placeholder: "Title" }/
     .row
       .col-md-12
         .cover-image-upload
-          = f.fields_for @main_image do |proto_main_image|
+          = f.fields_for :prototype_images do |proto_main_image|
             = proto_main_image.file_field :content
             = proto_main_image.hidden_field :status, value: 'main_image'
       .col-md-12
         %ul.proto-sub-list.list-group
-          = f.fields_for @main_image do |proto_sub_image|
-            %li.list-group-item.col-md-4
-              .image-upload
+          %li.list-group-item.col-md-4
+            .image-upload
+              = f.fields_for :prototype_images do |proto_sub_image|
                 = proto_sub_image.file_field :content
                 = proto_sub_image.hidden_field :status, value: 'sub_images'
-            %li.list-group-item.col-md-4
-              .image-upload
+          %li.list-group-item.col-md-4
+            .image-upload
+              = f.fields_for :prototype_images do |proto_sub_image|
                 = proto_sub_image.file_field :content
                 = proto_sub_image.hidden_field :status, value: 'sub_images'
-            %li.list-group-item.col-md-4
-              .image-upload-plus
-                %span +
+          %li.list-group-item.col-md-4
+            .image-upload-plus
+              %span +
     .row.proto-description
       .col-md-12
         = f.text_field :catchcopy, placeholder: 'Catch Copy'
