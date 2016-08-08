@@ -10,7 +10,8 @@ class PrototypesController < ApplicationController
 
   def new
     @prototype = Prototype.new
-
+    @main_image = @prototype.prototype_images.build
+    @sub_image =  2.times { @prototype.prototype_images.build }
   end
 
   def create
