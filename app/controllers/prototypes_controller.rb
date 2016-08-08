@@ -9,6 +9,21 @@ class PrototypesController < ApplicationController
   end
 
   def new
+    @prototype = Prototype.new
 
   end
+
+  def create
+    @prototype = current_user.prototypes.new(prototype_params)
+    if @prototype.save
+       redirect_to root_url, notice: "Saved prototype Successfully"
+    end
+  end
+
+  private
+
+    def pototype_params
+      params.permit(:title, :catchcopy, :concept, prototype_images_attributes: [:id, :status, :content])
+    end
+
 end
