@@ -20,6 +20,8 @@ class PrototypesController < ApplicationController
 
     if @prototype.save
        redirect_to root_path, notice: "Saved prototype Successfully"
+     else
+      render :new, alert: 'Save to failure'
     end
 
   end
