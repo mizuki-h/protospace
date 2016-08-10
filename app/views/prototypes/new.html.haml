@@ -1,6 +1,6 @@
 = form_for @prototype, html: {class: 'container proto-new'}  do |f|
   - if @prototype.errors.any?
-    #error_explanation.alert.alert-danger
+    .alert.alert-danger
       %h2
         = pluralize(@prototype.errors.count, "error")
         prohibited this post from being saved:
