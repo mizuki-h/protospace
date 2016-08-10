@@ -30,3 +30,4 @@ module Protospace
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
   end
 end
+
