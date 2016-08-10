@@ -9,10 +9,8 @@ class PrototypesController < ApplicationController
   end
 
   def new
-
     @prototype = Prototype.new
     @prototype.prototype_images.build
-
   end
 
   def create
@@ -22,15 +20,12 @@ class PrototypesController < ApplicationController
      else
       render :new, alert: 'Save to failure'
     end
-
   end
 
   private
-
-    def prototype_params
+  def prototype_params
       params.require(:prototype).permit(:title, :catchcopy, :concept, prototype_images_attributes: [:id, :status, :content])
-    end
-
+  end
 end
 
 
