@@ -1,6 +1,5 @@
 class PrototypeImageUploader < CarrierWave::Uploader::Base
 
-
   storage :file
 
   def store_dir
