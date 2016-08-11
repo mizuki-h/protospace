@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806024427) do
+ActiveRecord::Schema.define(version: 20160809063702) do
+
+  create_table "prototype_images", force: :cascade do |t|
+    t.text     "content",      limit: 65535
+    t.integer  "prototype_id", limit: 4
+    t.integer  "status",       limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "prototype_images", ["prototype_id"], name: "index_prototype_images_on_prototype_id", using: :btree
 
   create_table "prototypes", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -47,5 +57,6 @@ ActiveRecord::Schema.define(version: 20160806024427) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "prototype_images", "prototypes"
   add_foreign_key "prototypes", "users"
 end
