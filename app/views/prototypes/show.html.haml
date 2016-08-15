@@ -4,7 +4,7 @@
       .media
         .media-left
           =link_to user_path do
-            = image_tag @prototypes.user.avatar, class: 'media-object', size: '64x64'
+            = image_tag @prototypes.user.avatar, class: 'media-object', size: '64x64', alt: 'no-image'
         .media-body
           %h4#top-aligned-media.media-heading
             Top aligned media
