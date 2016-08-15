@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
 
+  before_action :user_find ,only:[:show,:edit]
+
   def show
-    @user = User.find(params[:id])
     @prototype = @user.prototypes.order("created_at DESC")
   end
 
   def edit
-    @user = User.find(current_user)
+
   end
 
   def update
@@ -18,6 +19,10 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:name, :member, :profile, :works, :avatar, :email)
+  end
+
+  def user_find
+    @user = User.find(params[:id])
   end
 
 end
