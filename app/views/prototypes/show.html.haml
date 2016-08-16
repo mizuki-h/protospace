@@ -3,17 +3,17 @@
     .col-md-6
       .media
         .media-left
-          =link_to user_path(current_user) do
+          = link_to user_path(current_user) do
             = image_tag @prototype.user.avatar, class: 'media-object', size: '64x64', alt: 'no-image'
         .media-body
           %h4#top-aligned-media.media-heading
             Top aligned media
           .proto-user
-            =link_to "by#{@prototype.user.name}",user_path(current_user)
+            = link_to "by#{@prototype.user.name}",user_path(current_user)
             %span.degree #{@prototype.user.profile}
 
     .col-md-6.text-right
-      =button_tag class:"btn btn-default" do
+      = button_tag class:"btn btn-default" do
         = image_tag("icon_heart.svg")
         Like
         %span.num 20
@@ -48,34 +48,34 @@
     .col-md-8
       .media
         .media-left
-          =link_to '#' do
+          = link_to '#' do
             = image_tag('', class: 'media-object', size: '64x64')
         .media-body
           %h4#top-aligned-media.media-heading
             Top aligned media
-            =link_to '#top-aligned-media',class: "anchorjs-link" do
+            = link_to '#top-aligned-media',class: "anchorjs-link" do
               %span.anchorjs-icon
           %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       .media
         .media-left
-          =link_to '#' do
+          = link_to '#' do
             = image_tag('', class: 'media-object', size: '64x64')
         .media-body
           %h4#top-aligned-media.media-heading
             Top aligned media
-            =link_to '#top-aligned-media',class: "anchorjs-link" do
+            = link_to '#top-aligned-media',class: "anchorjs-link" do
               %span.anchorjs-icon
           %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       .media
         .media-left
-          =link_to '#' do
+          = link_to '#' do
             = image_tag('', class: 'media-object', size: '64x64')
         .media-body
           %h4#top-aligned-media.media-heading
             Top aligned media
-            =link_to '#top-aligned-media',class: "anchorjs-link" do
+            = link_to '#top-aligned-media',class: "anchorjs-link" do
               %span.anchorjs-icon
           %p Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
           %p Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -85,5 +85,5 @@
           .form-group.col-md-10
             %textarea.form-control{placeholder: "Your comments", rows: "3"}
           .form-group.col-md-2
-            =button_tag "Comment",class: "btn btn-primary"
+            = button_tag "Comment",class: "btn btn-primary"
 
