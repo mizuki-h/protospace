@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :user_find ,only:[:show,:edit]
+  before_action :find_user ,only:[:show,:edit]
 
   def show
     @prototype = @user.prototypes.order("created_at DESC")
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :member, :profile, :works, :avatar, :email)
   end
 
-  def user_find
+  def find_user
     @user = User.find(params[:id])
   end
 
