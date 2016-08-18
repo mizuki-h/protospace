@@ -32,6 +32,11 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def destroy
+    @prototype.destroy
+    redirect_to root_path, notice: "Deleted prototype Successfully"
+  end
+
   private
   def prototype_params
       params.require(:prototype).permit(:title, :catchcopy, :concept, prototype_images_attributes: [:id, :status, :content])
