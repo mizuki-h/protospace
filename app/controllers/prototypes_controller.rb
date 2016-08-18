@@ -37,7 +37,7 @@ class PrototypesController < ApplicationController
       @prototype.destroy
       redirect_to root_path, notice: "Deleted prototype Successfully"
     else
-      redirect_to :update, alert: "Could not be updated"
+      render :update, alert: "Could not be updated"
     end
   end
 
