@@ -29,6 +29,8 @@ class PrototypesController < ApplicationController
   def update
     if @prototype.update(prototype_params)
        redirect_to root_path, notice: "Saved prototype Successfully"
+      else
+        render :update, alert: "Could not be updated"
     end
   end
 
@@ -36,8 +38,6 @@ class PrototypesController < ApplicationController
     if @prototype.user_id == current_user.id
       @prototype.destroy
       redirect_to root_path, notice: "Deleted prototype Successfully"
-    else
-      render :update, alert: "Could not be updated"
     end
   end
 
