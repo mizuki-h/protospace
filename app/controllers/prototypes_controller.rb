@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
 
-  before_action :find_prototype ,only:[:show,:edit]
+  before_action :find_prototype ,only:[:show,:edit,:destroy,:update]
 
   def index
     @prototypes = Prototype.all.order("created_at DESC")
@@ -33,8 +33,10 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    @prototype.destroy
-    redirect_to root_path, notice: "Deleted prototype Successfully"
+    if @prototype.user_id == current_user.id
+      @prototype.destroy
+      redirect_to root_path, notice: "Deleted prototype Successfully"
+    end
   end
 
   private
