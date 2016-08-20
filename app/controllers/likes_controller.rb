@@ -15,3 +15,4 @@ before_action :find_prototype ,only:[:create, :destroy]
     @prototype = Prototype.find(params[:prototype_id])
   end
 end
+
