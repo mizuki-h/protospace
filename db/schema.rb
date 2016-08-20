@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809063702) do
+ActiveRecord::Schema.define(version: 20160820002843) do
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "user_id",      limit: 4
+    t.integer  "prototype_id", limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "likes", ["prototype_id"], name: "index_likes_on_prototype_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
   create_table "prototype_images", force: :cascade do |t|
     t.text     "content",      limit: 65535
@@ -30,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160809063702) do
     t.integer  "user_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "count",      limit: 4,     default: 0
   end
 
   add_index "prototypes", ["user_id"], name: "index_prototypes_on_user_id", using: :btree
@@ -57,6 +68,8 @@ ActiveRecord::Schema.define(version: 20160809063702) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "likes", "prototypes"
+  add_foreign_key "likes", "users"
   add_foreign_key "prototype_images", "prototypes"
   add_foreign_key "prototypes", "users"
 end
