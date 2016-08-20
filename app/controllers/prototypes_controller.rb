@@ -1,5 +1,4 @@
 class PrototypesController < ApplicationController
-
   before_action :find_prototype ,only:[:show,:edit,:destroy,:update]
 
   def index

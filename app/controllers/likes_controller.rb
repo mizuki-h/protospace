@@ -7,7 +7,7 @@ before_action :find_prototype ,only:[:create, :destroy]
   end
 
   def destroy
-    @prototype.likes.find(params[:id]).destroy
+    @prototype.likes.find(params[:prototype_id).destroy
   end
 
   private
