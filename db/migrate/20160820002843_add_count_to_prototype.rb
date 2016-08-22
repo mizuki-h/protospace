@@ -3,3 +3,4 @@ class AddCountToPrototype < ActiveRecord::Migration
     add_column :prototypes, :count, :integer, default: 0
   end
 end
+
