@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-
+  before_action :authenticate_user!, except: [:index,:show]
   before_action :find_prototype ,only:[:show,:edit,:destroy,:update]
 
   def index
@@ -7,6 +7,7 @@ class PrototypesController < ApplicationController
   end
 
   def show
+    @likes = @prototype.likes
   end
 
   def new
