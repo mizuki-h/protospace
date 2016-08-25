@@ -43,7 +43,7 @@
     %h4.col-md-12
       Comments
       %span.num (#{@prototype.comments.count})
-    .col-md-8
+    .col-md-8#all_comments
       =render @comments
 
 
@@ -53,8 +53,8 @@
             %h4 Write a comment
             .row
               .form-group.col-md-10
-                %textarea.form-control{placeholder: "Your comments", rows: "3"}
+                = f.text_area :text, placeholder: "Your comments", class: "form-control", rows: "3", id: "comment_form"
               .form-group.col-md-2
-                = button_tag "Comment",class: "btn btn-primary"
+                = f.submit "Comment", class: "btn btn-primary"
 
 
