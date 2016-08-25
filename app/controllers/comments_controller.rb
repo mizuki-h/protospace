@@ -10,9 +10,9 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:text, :user_id, :prototype_id)
   end
-  #   private
-  # def find_prototype
-  #   @prototype = Prototype.find(params[:id])
-  # end
+    private
+  def find_prototype
+    @prototype = Prototype.find(params[:prototype_id])
+  end
 end
 
