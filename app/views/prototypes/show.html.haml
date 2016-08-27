@@ -44,7 +44,7 @@
       Comments
       %span.num (#{@prototype.comments.count})
     .col-md-8#all_comments
-      =render partial: 'prototypes/comment', locals: {comment: @comments}
+      =render partial: 'prototypes/comment'
 
       .form-inline
         - if user_signed_in?
