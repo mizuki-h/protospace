@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
-  before_action :find_prototype ,only:[:create]
+  before_action :find_prototype, only: [:create]
 
 
   def create
     @comments = @prototype.comments.includes(:user, :prototype)
-    @comment = @prototype.comments.create(comment_params)
+    comment = @prototype.comments.create(comment_params)
   end
 
   private
