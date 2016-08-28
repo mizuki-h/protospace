@@ -1,0 +1,10 @@
+- @comments.each do|comment|
+  .media
+    .media-left
+      = link_to image_tag("#{@prototype.user.avatar}", size: "64x64", class: "media-object")
+    .media-body
+      %h4#top-aligned-media.media-heading
+        = comment.user.name
+        = link_to '#top-aligned-media',class: "anchorjs-link" do
+          %span.anchorjs-icon
+      %p= comment.text
