@@ -8,7 +8,7 @@ class PrototypesController < ApplicationController
 
   def show
     @likes = @prototype.likes
-    @comment = Comment.new(prototype_id: @prototype.id)
+    @comment = Comment.new
     @comments = @prototype.comments
   end
 
