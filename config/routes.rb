@@ -10,3 +10,4 @@ Rails.application.routes.draw do
     resources :popular, only: :index
   end
 end
+
