@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
   resources :users, only:[:show, :edit, :update]
-  resources :popular, only:[:index]
+  scope module: :prototypes do
+    resources :popular, only: :index
+  end
 end
-
