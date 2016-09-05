@@ -20,7 +20,7 @@
 
 .container.proto-list
   .row
-    = render @prototypes
+    = render partial: "prototypes/prototype", collection: @prototypes
 
 .text-center
   %ul.pagination
@@ -41,3 +41,4 @@
     %li
       =link_to '#',aria: {label: "Next"} do
         %span{area: {hidden:true}} »
+
