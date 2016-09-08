@@ -37,7 +37,7 @@
       %ul.proto-tag-list.list-inline
         -@prototype.tags.each do |tag|
           %li
-            =link_to "#{tag.name}", tag_path(tag.id), class: "btn btn-default"
+            =link_to tag.name, tag_path(tag.id), class: "btn btn-default"
 
   .row.proto-comments
     %h4.col-md-12
