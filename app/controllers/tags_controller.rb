@@ -7,5 +7,5 @@ class TagsController < ApplicationController
     @tag =  ActsAsTaggableOn::Tag.find(params[:id])
     @prototypes = Prototype.tagged_with(@tag).includes(:user)
   end
-
 end
+
