@@ -6,6 +6,9 @@ class Prototype < ActiveRecord::Base
   accepts_nested_attributes_for :prototype_images
   validates :title, :catchcopy, :concept, presence: true
 
+  acts_as_taggable_on :prototypes
+  acts_as_taggable
+
   def like_user(user)
    likes.find_by(user_id: user)
   end
