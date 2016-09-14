@@ -685,7 +685,7 @@ body {
     font-size: 13px;
 }
 
-/*写真プレビュー*/
+/*previews*/
 .review_img img{
   height:500px;
   width: 730px;
@@ -695,4 +695,16 @@ body {
   height: 200px;
   width: 243px;
 }
-
+.avatar_img{
+  width: 75px;
+  height: 75px;
+  margin-left: -17px;
+  margin-top: -3px;
+}
+.avatar_img img{
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    background-size: cover;
+}
