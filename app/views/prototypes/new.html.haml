@@ -24,14 +24,14 @@
           %li.list-group-item.col-md-4
             .image-upload
               = f.fields_for :prototype_images do |proto_sub_image|
-                = proto_sub_image.file_field :content, class: "input_img"
-                .review_img
+                = proto_sub_image.file_field :content, class: "input_sub_img"
+                .review_sub_img
                 = proto_sub_image.hidden_field :status, value: 'sub_images'
           %li.list-group-item.col-md-4
             .image-upload
               = f.fields_for :prototype_images do |proto_sub_image|
-                = proto_sub_image.file_field :content, class: "input_img"
-                .review_img
+                = proto_sub_image.file_field :content, class: "input_sub02_img"
+                .review_sub02_img
                 = proto_sub_image.hidden_field :status, value: 'sub_images'
           %li.list-group-item.col-md-4
             .image-upload-plus
