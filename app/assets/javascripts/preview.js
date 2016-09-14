@@ -51,3 +51,4 @@ $(function(){
     fileReader.readAsDataURL(selectedFile);
   });
 });
+
