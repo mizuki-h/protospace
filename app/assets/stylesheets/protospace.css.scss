@@ -417,7 +417,7 @@ body {
     font-size: 24px;
   }
 
-  .cover-image-upload {
+  .cover-image-upload{
     background: image-url("noimage-big.png") #fff no-repeat center center;
     height: 500px;
     position: relative;
@@ -685,5 +685,14 @@ body {
     font-size: 13px;
 }
 
+/*写真プレビュー*/
+.review_img img{
+  height:500px;
+  width: 730px;
+}
 
+.review_sub_img img ,.review_sub02_img img{
+  height: 200px;
+  width: 243px;
+}
 
