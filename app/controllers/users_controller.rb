@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :find_user ,only:[:show,:edit]
 
   def show
-    @prototype = @user.prototypes.order("created_at DESC")
+    @prototype = @user.prototypes.order("created_at DESC").page(params[:page]).per(8)
   end
 
   def edit
