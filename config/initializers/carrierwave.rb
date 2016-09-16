@@ -16,3 +16,4 @@ CarrierWave.configure do |config|
         config.asset_host = 'https://s3.amazonaws.com/protospace-mizu'
     end
 end
+
