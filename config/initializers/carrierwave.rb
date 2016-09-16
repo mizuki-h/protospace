@@ -9,10 +9,10 @@ CarrierWave.configure do |config|
 
     case Rails.env
     when 'development'
-        config.fog_directory  = 'ここにバケット名を入れます'
-        config.asset_host = 'https://s3.amazonaws.com/ここにバケット名を入れます'
+        config.fog_directory  = 'protospace-mizu'
+        config.asset_host = 'https://s3.amazonaws.com/protospace-mizu'
     when 'production'
-        config.fog_directory  = 'ここにバケット名を入れます'
-        config.asset_host = 'https://s3.amazonaws.com/ここにバケット名を入れます'
+        config.fog_directory  = 'protospace-mizu'
+        config.asset_host = 'https://s3.amazonaws.com/protospace-mizu'
     end
 end
