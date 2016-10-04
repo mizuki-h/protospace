@@ -67,7 +67,7 @@ describe Prototype do
     end
 
     context '#when not like by a user' do
-      it "return nill" do
+      it "return false" do
         user = create(:user)
         prototype = create(:prototype, user: another_user)
         like = create(:like, prototype: prototype, user: another_user)
@@ -77,3 +77,4 @@ describe Prototype do
   end
 
 end
+
