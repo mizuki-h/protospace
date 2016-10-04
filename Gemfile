@@ -64,3 +64,4 @@ gem 'acts-as-taggable-on'
 gem 'kaminari'
 gem 'fog'
 gem 'config'
+gem "selenium-webdriver"
