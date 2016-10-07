@@ -44,3 +44,4 @@ RSpec.feature 'user', type: :feature do
     click_button 'Publish'
     expect(page).to have_content 'Created successfully!'
   end
+
