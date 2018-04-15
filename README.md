@@ -1,13 +1,13 @@
-#DB DESIGN
+# DB DESIGN
 
-##user
+## user
 
-####association
+#### association
 * has_many prototypes
 * has_many comments
 * has_many likes
 
-####column
+#### column
 
 | column    |       data |
 |:---------:|:----------:|
@@ -20,15 +20,15 @@
 | works     |      string|
 | avatar    |        text|
 
-##prototype
+## prototype
 
-####association
+#### association
 * has_many comments
 * has_many images
 * has_many likes
 * belongs_to user
 
-####column
+#### column
 | column    |      data  |
 |:---------:|:----------:|
 | id        |     integer|
@@ -37,13 +37,13 @@
 | concept   |        text|
 | user      |  references|
 
-##comment
+## comment
 
-####association
+#### association
 * belongs_to  user
 * belongs_to  prototype
 
-####column
+#### column
 | column         |         data  |
 |:--------------:|:-------------:|
 | id             |        integer|
@@ -51,14 +51,14 @@
 | prototype      |     references|
 | text           |           text|
 
-##like
+## like
 
-####association
+#### association
 
 * belongs_to  prototype
 * belongs_to  user
 
-####column
+#### column
 
 | column         |         data  |
 |:--------------:|:-------------:|
@@ -67,12 +67,12 @@
 | prototype      |     references|
 
 
-##image
+## image
 
-####association
+#### association
 * belongs_to  prototype
 
-####column
+#### column
 
 | column         |         data  |
 |:--------------:|:-------------:|
